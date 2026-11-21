@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah Dupuis | Community Manager & Social Media Strategist</title>
+  <!-- Favicon SVG simple (violet + rose) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+   <!-- Favicon SVG lettre S -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236c5ce7'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Segoe UI, sans-serif' font-size='36' font-weight='800'%3ES%3C/text%3E%3Ccircle cx='50' cy='14' r='6' fill='%23fd79a8'/%3E%3C/svg%3E">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Barre de progression au Scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Overlay Modal pour les détails des projets -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Fermer la fenêtre"><i data-lucide="x"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Contenu injecté dynamiquement par le JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">Sarah<span>.CM</span></a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">À propos</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#process" class="nav-link">Méthode</a></li>
+      <li><a href="#portfolio" class="nav-link">Réalisations</a></li>
+      <li><a href="#testimonials" class="nav-link">Avis</a></li>
+      <li><a href="#contact" class="btn-primary btn-nav">Discutons de votre projet</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="badge animate-blur"><i data-lucide="sparkles"></i> Social Media & Content Strategist</span>
+      <h1 class="animate-hero-title">Je transforme vos réseaux en <span>machine à engager</span> et convertir.</h1>
+      <p class="animate-hero-desc">Marre de publier dans le vide ? J'accompagne les marques ambitieuses pour créer du contenu viral, bâtir une communauté engagée et booster leur chiffre d'affaires.</p>
+      
+      <div class="hero-btns animate-hero-btns">
+        <a href="#contact" class="btn-primary shimmer-btn">Réserver une consultation <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+        <a href="#portfolio" class="btn-secondary">Voir mes cas d'études</a>
+      </div>
+
+      <div class="hero-trust">
+        <p>Reconnue par des marques fortes :</p>
+        <div class="trust-icons">
+          <span><i data-lucide="instagram"></i> Instagram</span>
+          <span><i data-lucide="video"></i> TikTok</span>
+          <span><i data-lucide="linkedin"></i> LinkedIn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrapper animate-hero-img">
+      <div class="hero-image-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Sarah Dupuis Community Manager" class="hero-img">
+        
+        <!-- Badges Flottants Interactifs -->
+        <div class="floating-badge badge-1">
+          <div class="badge-icon icon-fire"><i data-lucide="flame"></i></div>
+          <div class="badge-text">
+            <strong>+240%</strong>
+            <span>Portée organique</span>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-2">
+          <div class="badge-icon icon-views"><i data-lucide="eye"></i></div>
+          <div class="badge-text">
+            <strong>3.5M</strong>
+            <span>Vues cumulées</span>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-3">
+          <div class="badge-icon icon-star"><i data-lucide="heart"></i></div>
+          <div class="badge-text">
+            <strong>4.9/5</strong>
+            <span>Satisfaction client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Chiffres Clés / Proof Section -->
+  <section class="stats reveal-group">
+    <div class="stat-card reveal-item">
+      <div class="stat-number"><h3 class="counter" data-target="180">0</h3><span>+</span></div>
+      <p class="stat-label">Campagnes Social Media</p>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number"><h3 class="counter" data-target="5">0</h3><span>M+</span></div>
+      <p class="stat-label">Impressions Générées</p>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number"><h3 class="counter" data-target="98">0</h3><span>%</span></div>
+      <p class="stat-label">Taux de Rétention Clients</p>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number"><h3 class="counter" data-target="60">0</h3><span>+</span></div>
+      <p class="stat-label">Comptes Optimisés</p>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="about">
+    <div class="about-image reveal-left">
+      <div class="img-frame">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Sarah en création de contenu">
+        <div class="experience-tag">
+          <span>5+ ans</span>
+          <small>d'expérience</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal-right">
+      <span class="section-subtitle">À propos de moi</span>
+      <h2>L'art du Storytelling au service de votre croissance.</h2>
+      <p class="lead">Le Community Management, ce n'est pas juste poster une belle photo avec trois hashtags. C'est comprendre la psychologie de votre audience et créer des contenus qui déclenchent des émotions et des achats.</p>
+      <p>Ancienne responsable Brand Content, j'aide aujourd'hui les D2C, Startups et PME à s'imposer comme les références incontournables de leur secteur.</p>
+      
+      <div class="about-highlights reveal-group">
+        <div class="highlight-item reveal-item">
+          <i data-lucide="target" class="highlight-icon"></i>
+          <div>
+            <h4>Orientation Conversion</h4>
+            <p>Des contenus conçus pour transformer vos followers en clients fidèles.</p>
+          </div>
+        </div>
+        <div class="highlight-item reveal-item">
+          <i data-lucide="zap" class="highlight-icon"></i>
+          <div>
+            <h4>Tendances & Viralité</h4>
+            <p>Maîtrise parfaite des codes TikTok et Instagram Reels pour squatter la For You.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="section-header reveal-up">
+      <span class="section-subtitle">Mes Solutions</span>
+      <h2>Comment pouvons-nous travailler ensemble ?</h2>
+      <p class="section-desc">Des offres clé en main adaptées au stade de développement de votre entreprise.</p>
+    </div>
+
+    <div class="services-grid reveal-group">
+      <!-- Service 1 -->
+      <div class="service-card reveal-item highlight-card">
+        <div class="card-badge">Plus Populaire</div>
+        <div class="icon-wrapper"><i data-lucide="instagram"></i></div>
+        <h3>Gestion Complète 360°</h3>
+        <p>Déléguez l'intégralité de vos réseaux. Je m'occupe de tout pour que vous puissiez vous concentrer sur votre business.</p>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Calendar éditorial mensuel</li>
+          <li><i data-lucide="check"></i> Création visuelle & Rédaction</li>
+          <li><i data-lucide="check"></i> Modération & Engagement quotidien</li>
+          <li><i data-lucide="check"></i> Reporting mensuel détaillé</li>
+        </ul>
+        <a href="#contact" class="btn-service">En savoir plus <i data-lucide="arrow-right"></i></a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card reveal-item">
+        <div class="icon-wrapper"><i data-lucide="clapperboard"></i></div>
+        <h3>Production Short-Form (Reels & TikTok)</h3>
+        <p>Le format vidéo court est le levier #1 pour exploser votre visibilité. Donnons un coup de fouet à votre présence.</p>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Scripts & Conceptings viraux</li>
+          <li><i data-lucide="check"></i> Tournage sur place / Direction artistique</li>
+          <li><i data-lucide="check"></i> Montage dynamique (Sous-titres, effets)</li>
+          <li><i data-lucide="check"></i> Audio tendance & Sound Design</li>
+        </ul>
+        <a href="#contact" class="btn-service">En savoir plus <i data-lucide="arrow-right"></i></a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card reveal-item">
+        <div class="icon-wrapper"><i data-lucide="compass"></i></div>
+        <h3>Audit & Stratégie Social Media</h3>
+        <p>Vous avez déjà une équipe en interne mais vos résultats stagnent ? Obtenez une feuille de route claire et actionnable.</p>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Audit complet de vos profils</li>
+          <li><i data-lucide="check"></i> Analyse concurrentielle avancée</li>
+          <li><i data-lucide="check"></i> Définition des piliers de contenu</li>
+          <li><i data-lucide="check"></i> Session de coaching d'1h30</li>
+        </ul>
+        <a href="#contact" class="btn-service">En savoir plus <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processus / Méthode -->
+  <section id="process" class="process">
+    <div class="section-header reveal-up">
+      <span class="section-subtitle">Méthodologie</span>
+      <h2>Un processus clair pour des résultats garantis</h2>
+    </div>
+
+    <div class="process-steps reveal-group">
+      <div class="process-step reveal-item">
+        <div class="step-number">01</div>
+        <h3>Onboarding & Immersion</h3>
+        <p>Découverte de votre ADN de marque, étude de votre cible idéale et définition des objectifs KPI.</p>
+      </div>
+
+      <div class="process-step reveal-item">
+        <div class="step-number">02</div>
+        <h3>Stratégie & Planning</h3>
+        <p>Création de la ligne éditoriale, des formats signatures et validation du calendrier de contenu.</p>
+      </div>
+
+      <div class="process-step reveal-item">
+        <div class="step-number">03</div>
+        <h3>Production & Publication</h3>
+        <p>Création des visuels, montage des vidéos, rédaction captivante et programmation optimale.</p>
+      </div>
+
+      <div class="process-step reveal-item">
+        <div class="step-number">04</div>
+        <h3>Analyse & Optimisation</h3>
+        <p>Suivi quotidien des métriques, animation de la communauté et ajustements stratégiques.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="section-header reveal-up">
+      <span class="section-subtitle">Études de cas</span>
+      <h2>Quelques projets récents</h2>
+      <p class="section-desc">Cliquez sur un projet pour découvrir la stratégie déployée et les résultats obtenus.</p>
+    </div>
+
+    <div class="portfolio-grid reveal-group">
+      <!-- Projet 1 -->
+      <div class="portfolio-card reveal-item" data-project="cosmetique">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Marque Cosmétique Bio">
+          <div class="portfolio-overlay">
+            <span>Découvrir le projet <i data-lucide="plus"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span class="tag">Instagram & Content</span>
+          <h4>GlowCare — Skincare Clean</h4>
+          <p><strong>Résultat :</strong> +18 000 abonnés ciblés et +140% de ventes via Instagram Shopping.</p>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="portfolio-card reveal-item" data-project="resto">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=600&q=80" alt="Restaurant RestoBar">
+          <div class="portfolio-overlay">
+            <span>Découvrir le projet <i data-lucide="plus"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span class="tag">TikTok & Reels</span>
+          <h4>RestoBar urban — Concept Food</h4>
+          <p><strong>Résultat :</strong> 3 vidéos virales à plus d'1 million de vues et réservations complètes sur 2 mois.</p>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="portfolio-card reveal-item" data-project="saas">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80" alt="Start-up SaaS B2B">
+          <div class="portfolio-overlay">
+            <span>Découvrir le projet <i data-lucide="plus"></i></span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span class="tag">LinkedIn & Thought Leadership</span>
+          <h4>TechFlow — SaaS RH</h4>
+          <p><strong>Résultat :</strong> Positionnement des dirigeants en leaders d'opinion et +45 démonstrations/mois.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / Témoignages -->
+  <section id="testimonials" class="testimonials">
+    <div class="section-header reveal-up">
+      <span class="section-subtitle">Témoignages</span>
+      <h2>Ce que mes clients disent de moi</h2>
+    </div>
+
+    <div class="testimonials-grid reveal-group">
+      <div class="testimonial-card reveal-item">
+        <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+        <p>"Sarah a complètement transformé notre image sur TikTok. Sa réactivité et sa créativité sont incroyables. Les retombées sur nos ventes directes ont été immédiates !"</p>
+        <div class="client-info">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Camille Morel">
+          <div>
+            <strong>Camille Morel</strong>
+            <small>Fondatrice, GlowCare</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal-item">
+        <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+        <p>"Travailler avec Sarah est un vrai bonheur. Elle comprend les enjeux B2B tout en apportant une touche de créativité rafraîchissante. Nos leads LinkedIn ont doublé."</p>
+        <div class="client-info">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Alexandre Vane">
+          <div>
+            <strong>Alexandre Vane</strong>
+            <small>CEO, TechFlow SaaS</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="section-header reveal-up">
+      <span class="section-subtitle">Questions fréquentes</span>
+      <h2>Vous avez des interrogations ?</h2>
+    </div>
+
+    <div class="faq-container reveal-up">
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span>Combien de temps dure un accompagnement type ?</span>
+          <i data-lucide="chevron-down" class="faq-icon"></i>
+        </button>
+        <div class="faq-content">
+          <div class="faq-inner">
+            Les contrats de gestion complète sont d'une durée minimale de 3 mois. C'est le temps nécessaire pour tester des formats, installer une vraie ligne éditoriale et obtenir des résultats organiques profonds et durables.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span>Devons-nous fournir les photos et vidéos ?</span>
+          <i data-lucide="chevron-down" class="faq-icon"></i>
+        </button>
+        <div class="faq-content">
+          <div class="faq-inner">
+            Pas obligatoirement. Selon l'option choisie, je peux me déplacer dans vos locaux pour organiser des sessions de tournage/shooting, ou utiliser du contenu UGC (User Generated Content) et des éléments graphiques conçus sur-mesure.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger">
+          <span>Comment mesure-t-on le retour sur investissement (ROI) ?</span>
+          <i data-lucide="chevron-down" class="faq-icon"></i>
+        </button>
+        <div class="faq-content">
+          <div class="faq-inner">
+            Chaque mois, vous recevez un tableau de bord complet analysant la croissance de la communauté, le taux d'engagement, le trafic généré vers votre site web et les conversions directement attribuables aux réseaux sociaux.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire de Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-wrapper">
+      <div class="contact-info reveal-left">
+        <span class="section-subtitle">Contact</span>
+        <h2>Faisons passer vos réseaux au niveau supérieur !</h2>
+        <p>Un projet en tête ou besoin d'un diagnostic offert de vos réseaux ? Remplissez le formulaire ou contactez-moi directement.</p>
+        
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <strong>Email</strong>
+              <span>hello@sarah-cm.fr</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Localisation</strong>
+              <span>Paris & à distance dans toute la France</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required>
+          <label for="name">Votre nom complet</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Votre email professionnel</label>
+        </div>
+
+        <div class="form-group">
+          <select id="service" required>
+            <option value="" disabled selected></option>
+            <option value="gestion">Gestion complète 360°</option>
+            <option value="video">Production TikTok / Reels</option>
+            <option value="audit">Audit & Stratégie</option>
+            <option value="autre">Autre demande</option>
+          </select>
+          <label for="service">Quel est votre besoin ?</label>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" rows="4" placeholder=" " required></textarea>
+          <label for="message">Présentez votre entreprise et vos objectifs...</label>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn" id="submitBtn">
+          <span class="btn-text">Envoyer mon message <i data-lucide="send"></i></span>
+          <span class="spinner"></span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">Sarah<span>.CM</span></a>
+        <p>Social Media Strategy & Creative Content.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="TikTok"><i data-lucide="video"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sarah Dupuis. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
